@@ -5,6 +5,7 @@ alert ("Welcome to the race! It's time to find out who truly is the fastest hero
 Racing today we have: Lightning McQueen, Sonic the Hedgehog, and Dash from the Incredibles! 
 The first racer to travel 100 miles will win the race. Click ok to start the race.")
 
+ //Racer characteristics 
  function racer(name, speed, focus){
 	 this.name = name;
 	 //value:0-9
@@ -23,13 +24,14 @@ The first racer to travel 100 miles will win the race. Click ok to start the rac
 		return this.name + " is at mile: " + this.position
 	 }
  }
-
+ 
+ //Declare racers 
  var sonic = new racer("Sonic", 8, 10);
  var lightning = new racer("McQueen", 7, 9);
  var boy = new racer("Dash", 10, 7); 
  var meters = 100;
 
-
+ //Report racers position 
  while (sonic.position < meters && lightning.position < meters && boy.position < meters){
 	sonic.advance();
 	lightning.advance();
@@ -37,7 +39,7 @@ The first racer to travel 100 miles will win the race. Click ok to start the rac
 	alert(sonic.progressReport() + "--" + lightning.progressReport() + "--" + boy.progressReport());
 	}  
 
-  
+ //Declare winner 
  if (sonic.position > meters){
 	  alert("Sonic is the winner!");
 	} else if (lightning > meters) {
